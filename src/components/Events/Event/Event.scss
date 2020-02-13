@@ -1,0 +1,127 @@
+.event {
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  background: url('../../../assets/toolbar-background-image.png');
+
+  &:last-child {
+    flex-flow: row-reverse;
+  }
+
+  & > div:first-child { // carousel
+    flex: 1;
+
+    .carousel {
+      height: 100%;
+
+      .slider-wrapper {
+        height: 100%;
+
+        .slider.animated {
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-position: top;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .control-dots {
+
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    position: relative;
+    flex: 1;
+
+    .overlay {
+      background-color: #f2e2cc;
+      opacity: .8;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .secondary-imgs-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .description {
+      flex: 1;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 30px;
+
+      .action {
+        margin-top: 30px;
+        font-size: 19px;
+        font-weight: 600;
+        position: relative;
+
+        .action-txt1 {
+          margin-right: 5px;
+        }
+
+        .action-txt2 {
+          position: relative;
+          border-bottom: 2px solid;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) { 
+  .event {
+    .details {
+      .description {
+        p {
+          font-size: 13px;
+        }
+        .action {
+          position: absolute;
+          margin-top: 0;
+          font-size: 15px;
+          top: 85%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .event {
+    .details {
+      .description {
+        p {
+          font-size: 11px;
+        }
+        .action {
+          position: absolute;
+          margin-top: 0;
+          font-size: 12px;
+          top: 90%;
+        }
+      }
+    }
+  }
+}
