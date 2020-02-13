@@ -1,0 +1,53 @@
+@import '../../App.scss';
+
+.toolbar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 9%;
+  background: url('../../assets/toolbar-background-image.png') repeat;
+  color: #000;
+  font-size: 20px;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ae9f90;
+    opacity: .8;
+    z-index: 2;
+  }
+
+  span {
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: .7px;
+    z-index: 3;
+    font-weight: 600;
+
+    &:before {
+      content: '';
+      height: 2px;
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      width: 0;
+      background-color: #000;
+    }
+
+    &:hover {
+      &:before {
+        width: calc(100% - 30px);
+        transition: width .3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toolbar {
+    font-size: 14px;
+  }
+}

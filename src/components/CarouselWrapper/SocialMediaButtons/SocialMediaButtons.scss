@@ -1,0 +1,15 @@
+.social-media-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  top: 10px;
+  
+  img {
+    z-index: 2;
+    height: 16px;
+    padding: 0 7px;
+    cursor: pointer;
+  }
+}
