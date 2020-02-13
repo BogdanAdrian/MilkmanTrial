@@ -24,8 +24,8 @@ export const Follow = () => {
       <div className='images-container'>
         {
           IMAGES.map((src: string, index: number) => (
-            <div className='image-container'>
-              <img alt='food or beverage' className='follow-image' key={index} src={src}/>
+            <div className='image-container' key={index}>
+              <img alt='food or beverage' className='follow-image' src={src}/>
             </div>
           ))
         }

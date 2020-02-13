@@ -31,6 +31,7 @@ export const ImageMenu = () => {
       {
         IMAGES.map((imgConfig: any, index: number) => (
           <ImageBox
+            key={index}
             imageUrl={imgConfig.src}
             overlayColor={imgConfig.overlayColor}
             categoryUrl={imgConfig.categoryUrl}
